@@ -6,7 +6,8 @@
     "angular-ui-router": "latest",
     "angular-messages": "latest",
     "bootstrap": "latest",
-    "angular-resource": "latest"
+    "angular-resource": "latest",
+	"angular-bootstrap": "latest"
   },
   "overrides": {
     "bootstrap": {

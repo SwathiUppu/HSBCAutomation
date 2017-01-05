@@ -10,7 +10,14 @@
 
   function personFactory($http) {
   	var url = '/api/person';
-
+	
+   /* function getCountries() {
+  		return $http
+  			.get('/api/countries')
+  			.then(function (response) {
+  				return response.data;
+  			});
+  	}*/
   	function getTotalCount() {
   		return getPersons().then(function (response){
   			return response.total;
@@ -62,7 +69,7 @@
   		getPersons: getPersons,
   		getPersonById: getPersonById,
   		deletePerson: deletePerson,
-      updatePerson: updatePerson
+        updatePerson: updatePerson
   	};
   }
 

@@ -12,7 +12,10 @@
         "app.layout",
         "app.home",
         "app.about",
-        "app.person"
+        "app.person",
+		"app.registration",
+		"app.login",
+		"ui.bootstrap"
     ]);
 
 })();
