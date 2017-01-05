@@ -10,8 +10,9 @@
 
   function PersonController($stateParams, person, clipboard) {
     var vm = this;
-
-    vm.clipboard = clipboard;
+    vm.sortReverse = false;
+    vm.orderByField = 'firstName';
+    vm.reverseSort = false;
 
     vm.currPage = parseInt($stateParams.page) || 1;
 
@@ -28,6 +29,14 @@
       vm.persons = response.payload;
       createPageArr(response);
     });
+	
+	vm.delete = function (id) {
+      angular.forEach(vm.persons,function(key, value) {
+        if(vm.persons[value].id === id) {
+		  vm.persons.splice( value, 1 )	
+		}
+	  });
+    };
 
   }
 

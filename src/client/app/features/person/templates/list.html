@@ -16,8 +16,20 @@
       <table class="table" ng-if="vm.persons && vm.persons.length">
         <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+			<th>  
+			  <a href="javascript:void(0)" ng-click="vm.orderByField='firstName'; vm.reverseSort = !vm.reverseSort">
+                <!--<span ng-show="vm.orderByField==='firstName'; !vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
+			    <span ng-show="vm.orderByField==='firstName'; vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
+			    First Name
+              </a> 
+			</th>
+            <th>
+			  <a href="javascript:void(0)" ng-init="vm.orderByField='lastName'" ng-click="vm.orderByField='lastName'; vm.reverseSort = !vm.reverseSort">
+                <!--<span ng-show="!vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
+			    <span ng-show="vm.orderByField==='lastName' && vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
+			    Last Name
+              </a> 
+			</th>
             <th>City</th>
             <th>Salary</th>
             <th>Ratings</th>
@@ -25,7 +37,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="person in vm.persons">
+          <tr ng-repeat="person in vm.persons | orderBy:vm.orderByField:vm.reverseSort | filter: vm.listFilter">
             <td>{{person.firstName}}</td>
             <td>{{person.lastName}}</td>
             <td>{{person.city}}</td>
@@ -36,11 +48,11 @@
                 <i class="glyphicon glyphicon-tasks"></i> View
               </a>
               |
-              <a [routerLink]="['/person/edit', person.id]">
+              <a ui-sref="personEdit({id: person.id})">
                 <i class="glyphicon glyphicon-pencil"></i> Edit
               </a>
               |
-              <a href="">
+              <a href="javascript:void(0)" ng-click="vm.delete(person.id)">
                 <i class="glyphicon glyphicon-remove"></i> Delete
               </a>
             </td>

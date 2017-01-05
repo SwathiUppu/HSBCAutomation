@@ -24,7 +24,8 @@
                         nav: {
                             order: 1,
                             display: "Home"
-                        }
+                        },
+						isOtherwiseState: true
                     }
                 }
             }

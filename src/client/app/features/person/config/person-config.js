@@ -38,6 +38,15 @@
           controller: 'PersonEditController',
           controllerAs: 'vm'
         }
+      },
+	  {
+        name: 'personEdit',
+        config: {
+          url: '/person/edit/:id',
+          templateUrl: 'app/features/person/templates/edit.html',
+          controller: 'PersonEditController',
+          controllerAs: 'vm'
+        }
       }
     ];
   }
