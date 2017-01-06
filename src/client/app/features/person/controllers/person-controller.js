@@ -27,6 +27,9 @@
 
     person.getPersons($stateParams.page, $stateParams.size).then(function (response) {
       vm.persons = response.payload;
+	  vm.currentPage = 1;
+	  vm.itemsPerPage = 10;
+	  vm.totalItems = vm.persons.length;
       createPageArr(response);
     });
 	

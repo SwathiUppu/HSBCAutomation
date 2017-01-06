@@ -12,6 +12,7 @@
     </div>
 	 <toast></toast>
     <hr/>
+	 <ul class="pagination-center" uib-pagination total-items="vm.totalItems" items-per-page="10" ng-model="vm.currentPage"></ul>
     <div class="table-responsive">
       <table class="table" ng-if="vm.persons && vm.persons.length">
         <thead>
@@ -37,7 +38,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="person in vm.persons | orderBy:vm.orderByField:vm.reverseSort | filter: vm.listFilter">
+          <tr ng-repeat="person in vm.persons.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage)) | orderBy:vm.orderByField:vm.reverseSort | filter: vm.listFilter">
             <td>{{person.firstName}}</td>
             <td>{{person.lastName}}</td>
             <td>{{person.city}}</td>
