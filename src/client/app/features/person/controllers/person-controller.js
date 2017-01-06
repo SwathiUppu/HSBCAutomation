@@ -33,11 +33,11 @@
 	vm.delete = function (id) {
       angular.forEach(vm.persons,function(key, value) {
         if(vm.persons[value].id === id) {
-		  vm.persons.splice( value, 1 );
 		  ngToast.create({
             className: 'info',
-            content: '<div>User has been deleted!</div>'
+            content: '<div>' + vm.persons[value].firstName + ' has been deleted!</div>'
           });
+		  vm.persons.splice( value, 1 );
 		}
 	  });
     };
