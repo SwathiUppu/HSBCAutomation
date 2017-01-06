@@ -15,7 +15,8 @@
         "app.person",
 		"app.registration",
 		"app.login",
-		"ui.bootstrap"
+		"ui.bootstrap",
+		"ngToast"
     ]);
 
 })();

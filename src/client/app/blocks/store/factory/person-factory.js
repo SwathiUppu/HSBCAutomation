@@ -44,8 +44,8 @@
   	}
 
   	function updatePerson(person) {
-      var method = (person._id === -1) ? 'POST' : 'PUT';
-      var updateUrl = (person._id === -1) ? url : url + '/' + person._id;
+      var method = (person.id === -1) ? 'POST' : 'PUT';
+      var updateUrl = (person.id === -1) ? url : url + '/' + person.id;
 
       return $http(
           {

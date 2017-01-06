@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <form name="loginForm" novalidate>
+      <form class="appForm" name="loginForm" novalidate>
         <div class="alert alert-success" ng-show="vm.registered">You have successfully registered.Please login.</div>
         <div  class="alert alert-danger" ng-show="vm.submitted && loginForm.$invalid">Please fill the required fields</div>
         <div class="alert alert-danger" ng-show="loginForm.$valid && vm.loginFailed">Please enter valid credentials</div>

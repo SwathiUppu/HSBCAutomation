@@ -15,9 +15,10 @@
 
     vm.save = function (e) {
       e.preventDefault();
-      person.updatePerson(vm.person).then(function () {
-        $state.go('personView', {id: vm.person._id});
-      });
+	  $state.go('personView', {id: vm.person.id});
+      /*person.updatePerson(vm.person).then(function () {
+        $state.go('personView', {id: vm.person.id});
+      });*/
     };
 	
 	vm.reset = function (e) {
