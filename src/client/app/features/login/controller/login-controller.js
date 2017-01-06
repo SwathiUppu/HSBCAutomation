@@ -10,6 +10,7 @@
 
   function LoginController($stateParams, $state) {
     var vm = this;
+	vm.user = {};
 	if($stateParams.registered) {
       vm.registered = true;
 	}
