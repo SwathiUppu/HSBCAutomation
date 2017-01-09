@@ -6,9 +6,9 @@
     .module('app.login')
     .controller('LoginController', LoginController);
 
-  LoginController.$inject = ['$stateParams', '$state'];
+  LoginController.$inject = ['$stateParams', '$state', 'sharedFactory'];
 
-  function LoginController($stateParams, $state) {
+  function LoginController($stateParams, $state, sharedFactory) {
     var vm = this;
     vm.user = {};
     if($stateParams.registered) {
@@ -19,9 +19,14 @@
     if(vm.user.username !== 'user' || vm.user.password !== 'user') {
       vm.loginFailed = true;
     } else {
+	  sharedFactory.setSharedData({
+        loginSuccess: true
+      }, "loginSuccess");
       $state.go('personList');
     }
     }
   }
 
 })(angular);
+
+

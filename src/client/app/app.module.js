@@ -15,6 +15,7 @@
         'app.person',
 		'app.registration',
 		'app.login',
+		'app.sharedModule',
 		'ui.bootstrap',
 		'ngToast'
     ]);
