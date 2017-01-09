@@ -1,8 +1,8 @@
 (function() {
-    "use strict";
+    'use strict';
 
-    angular.module("app.home", [
-        "app.core",
-        "app.widgets"
+    angular.module('app.home', [
+        'app.core',
+        'app.widgets'
       ]);
 })();

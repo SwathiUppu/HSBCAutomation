@@ -1,11 +1,11 @@
 (function () {
-  "use strict";
+  'use strict';
 
   angular
-    .module("app.person")
+    .module('app.person')
     .run(run);
 
-  run.$inject = ["routerHelper"];
+  run.$inject = ['routerHelper'];
 
   function run(routerHelper) {
     routerHelper.configureStates(getStates());
@@ -23,7 +23,7 @@
           settings: {
             nav: {
               order: 2,
-              display: "Persons"
+              display: 'Persons'
             }
           }
         }
@@ -39,7 +39,7 @@
           controllerAs: 'vm'
         }
       },
-	  {
+      {
         name: 'personEdit',
         config: {
           url: '/person/edit/:id',
@@ -51,7 +51,6 @@
     ];
   }
 })();
-
 
 
 // 'use strict';

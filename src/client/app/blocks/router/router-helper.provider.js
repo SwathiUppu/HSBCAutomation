@@ -1,11 +1,11 @@
 (function() {
-    "use strict";
+    'use strict';
 
     angular
-        .module("blocks.router")
-        .provider("routerHelper", routerHelperProvider);
+        .module('blocks.router')
+        .provider('routerHelper', routerHelperProvider);
 
-    routerHelperProvider.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
+    routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
     function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
         this.setHtml5Mode = function (flag) {
@@ -14,7 +14,7 @@
 
         this.$get = $get;
 
-        $get.$inject = ["$state"];
+        $get.$inject = ['$state'];
 
         function $get ($state) {
             var isOtherwiseSet = false;

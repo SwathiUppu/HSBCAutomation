@@ -41,11 +41,7 @@
             </div>
             <select class="form-control" ng-model="vm.user.country" name="country" required>
               <option value="">Select Country</option>
-              <option>Afghanistan</option>
-			  <option>Albania</option>
-			  <option>Algeria</option>
-			  <option>AndorrA</option>
-			  <option>American Samoa</option>
+              <option ng-repeat="country in vm.countries">{{country.name}}</option>
             </select>
             <div class="error-message" ng-show="vm.submitted && registrationForm.country.$error.required">Country is required</div>
           </div>

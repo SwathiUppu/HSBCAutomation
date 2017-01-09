@@ -9,41 +9,42 @@
   personFactory.$inject = ['$http'];
 
   function personFactory($http) {
-  	var url = '/api/person';
-	
-   /* function getCountries() {
-  		return $http
-  			.get('/api/countries')
-  			.then(function (response) {
-  				return response.data;
-  			});
-  	}*/
-  	function getTotalCount() {
-  		return getPersons().then(function (response){
-  			return response.total;
-  		});
-  	}
+    var url = '/api/person';
 
-  	function getPersons(page, size) {
-  		page = page || 1;
-  		size = size || 10;
+    function getCountries() {
+        return $http
+            .get('/api/countries')
+            .then(function (response) {
+                return response.data;
+            });
+    }
+    function getTotalCount() {
+        return getPersons().then(function (response){
+            return response.total;
+        });
+    }
 
-  		return $http
-  			.get(url + '?page=' + page)
-  			.then(function (response) {
-  				return response.data;
-  			});
-  	}
+    function getPersons(page, size) {
+        page = page || 1;
+        size = size || 10;
 
-  	function getPersonById(id) {
-  		return $http
-  			.get(url + '/' + id)
-  			.then(function (response) {
-  				return response.data;
-  			});
-  	}
+        return $http
+            .get(url + '?page=' + page)
+            .then(function (response) {
+				response.size = size;
+                return response.data;
+            });
+    }
 
-  	function updatePerson(person) {
+    function getPersonById(id) {
+        return $http
+            .get(url + '/' + id)
+            .then(function (response) {
+                return response.data;
+            });
+    }
+
+    function updatePerson(person) {
       var method = (person.id === -1) ? 'POST' : 'PUT';
       var updateUrl = (person.id === -1) ? url : url + '/' + person.id;
 
@@ -56,21 +57,22 @@
         ).then(function (response) {
           return response.data;
         });
-  	}
+    }
 
-  	function deletePerson(id) {
-  		return $http.delete({
-  			url: url + '/' + id
-  		});
-  	}
+    function deletePerson(id) {
+        return $http.delete({
+            url: url + '/' + id
+        });
+    }
 
-  	return {
-  		getTotalCount: getTotalCount,
-  		getPersons: getPersons,
-  		getPersonById: getPersonById,
-  		deletePerson: deletePerson,
-        updatePerson: updatePerson
-  	};
+    return {
+        getTotalCount: getTotalCount,
+        getPersons: getPersons,
+        getPersonById: getPersonById,
+        deletePerson: deletePerson,
+        updatePerson: updatePerson,
+        getCountries: getCountries
+    };
   }
 
 })(angular);

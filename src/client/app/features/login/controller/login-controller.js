@@ -10,17 +10,17 @@
 
   function LoginController($stateParams, $state) {
     var vm = this;
-	vm.user = {};
-	if($stateParams.registered) {
+    vm.user = {};
+    if($stateParams.registered) {
       vm.registered = true;
-	}
+    }
     vm.login = function() {
       vm.submitted = true;
-	if(vm.user.username != 'user' || vm.user.password != 'user') {
-	  vm.loginFailed = true;
-	} else {
-	  $state.go('personList');
-	}
+    if(vm.user.username !== 'user' || vm.user.password !== 'user') {
+      vm.loginFailed = true;
+    } else {
+      $state.go('personList');
+    }
     }
   }
 

@@ -1,14 +1,14 @@
 (function () {
-    "use strict";
+    'use strict';
 
-    angular.module("app.about").controller("AboutCtrl", AboutCtrl);
+    angular.module('app.about').controller('AboutCtrl', AboutCtrl);
 
     AboutCtrl.$inject = [];
 
     function AboutCtrl () {
         var vm = this;
 
-        vm.technologies = ["GulpJs", "AngularJs"];
+        vm.technologies = ['GulpJs', 'AngularJs'];
     }
 
 })();

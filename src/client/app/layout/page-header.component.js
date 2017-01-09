@@ -1,9 +1,9 @@
 (function() {
-    "use strict";
+    'use strict';
 
     var pageHeader = {
-        templateUrl: "app/layout/page-header.template.html",
-        controller: ["routerHelper", function (routerHelper) {
+        templateUrl: 'app/layout/page-header.template.html',
+        controller: ['routerHelper', function (routerHelper) {
             var vm = this;
 
             vm.states = routerHelper.getStates().filter(function (state) {
@@ -16,6 +16,6 @@
         }]
     };
 
-    angular.module("app.layout").component("pageHeader", pageHeader);
+    angular.module('app.layout').component('pageHeader', pageHeader);
 
 })();

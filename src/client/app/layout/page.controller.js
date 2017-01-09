@@ -1,7 +1,7 @@
-angular.module("app")
+angular.module('app')
 
-.controller("PageCtrl", [function () {
+.controller('PageCtrl', [function () {
     var vm = this;
-    vm.appName = "Personnel Admin App";
-    vm.version = "1.0.0";
+    vm.appName = 'Personnel Admin App';
+    vm.version = '1.0.0';
 }]);

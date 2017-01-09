@@ -1,13 +1,13 @@
 (function () {
-    "use strict";
+    'use strict';
 
-    angular.module("app.home").controller("HomeCtrl", HomeCtrl);
+    angular.module('app.home').controller('HomeCtrl', HomeCtrl);
 
     HomeCtrl.$inject = [];
 
     function HomeCtrl () {
         var vm = this;
-        vm.title = "TryAngular";
+        vm.title = 'TryAngular';
     }
 
 })();

@@ -1,11 +1,11 @@
 (function() {
-    "use strict";
+    'use strict';
 
     angular
-        .module("app.home")
+        .module('app.home')
         .run(run);
 
-    run.$inject = ["routerHelper"];
+    run.$inject = ['routerHelper'];
 
     function run(routerHelper) {
         routerHelper.configureStates(getStates());
@@ -14,18 +14,18 @@
     function getStates() {
         return [
             {
-                "name": "home",
-                "config": {
-                    url: "/",
-                    templateUrl: "app/features/home/home.html",
-                    controller: "HomeCtrl as vm",
-                    title: "home",
+                'name': 'home',
+                'config': {
+                    url: '/',
+                    templateUrl: 'app/features/home/home.html',
+                    controller: 'HomeCtrl as vm',
+                    title: 'home',
                     settings: {
                         nav: {
                             order: 1,
-                            display: "Home"
+                            display: 'Home'
                         },
-						isOtherwiseState: true
+                        isOtherwiseState: true
                     }
                 }
             }

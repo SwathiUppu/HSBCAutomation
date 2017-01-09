@@ -1,11 +1,11 @@
 (function() {
-    "use strict";
+    'use strict';
 
     angular
-        .module("app.registration")
+        .module('app.registration')
         .run(run);
 
-    run.$inject = ["routerHelper"];
+    run.$inject = ['routerHelper'];
 
     function run(routerHelper) {
         routerHelper.configureStates(getStates());

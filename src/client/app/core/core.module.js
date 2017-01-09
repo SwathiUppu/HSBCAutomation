@@ -1,16 +1,16 @@
 (function () {
-    "use strict";
+    'use strict';
 
     angular
-        .module("app.core", [
+        .module('app.core', [
             //Angular modules
-            "ngMessages",
-            "ngResource",
+            'ngMessages',
+            'ngResource',
 
             //Third party modules
-            "ui.router",
+            'ui.router',
 
             //Custom modules
-            "blocks.router"
+            'blocks.router'
         ]);
 })();
