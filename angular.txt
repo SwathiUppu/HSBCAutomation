@@ -1,7 +1,7 @@
 https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxyaWRlZWFzeTEyMzR8Z3g6NDEzZTYzYjZkZmU2ZmQ4Yg
 
   https://global.inszoom.com/Corpdocs/dcqtext.aspx?QOrgId=Oftw&q=mjVDPz8yusRtf6eAZPBhGNiJ2aTEBHTdRRXIm9Vn1hk%3d&QQstInd=AdvStKt
-  
+  AACE6161215832660263
 angular
 
 1. Dependency injection - pattern that get hold of all the dependencies
