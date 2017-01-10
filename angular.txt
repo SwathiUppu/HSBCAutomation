@@ -1,5 +1,7 @@
 https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxyaWRlZWFzeTEyMzR8Z3g6NDEzZTYzYjZkZmU2ZmQ4Yg
 
+  https://global.inszoom.com/Corpdocs/dcqtext.aspx?QOrgId=Oftw&q=mjVDPz8yusRtf6eAZPBhGNiJ2aTEBHTdRRXIm9Vn1hk%3d&QQstInd=AdvStKt
+  
 angular
 
 1. Dependency injection - pattern that get hold of all the dependencies
@@ -36,7 +38,8 @@ angular
 32. <Controllername>.apply(vm, <name of variable>) -- parent to child
 33. ng-srcset - you can mention different variations. For example: ng-srcset = 'url 2x' -- this will change the size.
 34. angular.version - current version.
-35.
+35. $eval - executes expression of current scope.
+36. $parse - converts expression into function
 
 
 javascript
