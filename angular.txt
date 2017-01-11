@@ -13,7 +13,7 @@ angular
 7. Injector - DI container
 8. Check one way binding in depth
 9. Communication between controllers - rootscope, services, emit, broadcast, $parent, controllerAs and inject
-10. $destry - to detach scope and its children from the parent.
+10. $destroy - to detach scope and its children from the parent.
 11. HTML Compiler - allows to add any functionality to the HTML.
 12. Providers - constant, value, services and factory.
 13. Decorators -  modify directives, services or filters without changing the original code.
@@ -40,6 +40,8 @@ angular
 34. angular.version - current version.
 35. $eval - executes expression of current scope.
 36. $parse - converts expression into function
+37. service - gives instance of a function, factory - fives function a return value.
+38. ng-if - removes portion of the DOM (element is removed from DOM) and ng-show - shows/hides content
 
 
 javascript
@@ -117,7 +119,7 @@ jquery
 18. jQuery traversing descentants methods - children(), find().
 19. jQuery traversing sibling methods - siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil().
 20.  jQuery traversing filtering methods - first(), last(), eq(n) -- index , not(), filter().
-21. Ajax - Asynchronous JS and XML - loading data in background and dispplay it on the screen after callback.
+21. Ajax - Asynchronous JS and XML - loading data in background and display it on the screen after callback.
 22. $(selector).load(URL,data,callback) -- Ajax load method.
 23. $ is short for jQuery.
 24. If you need to use another JavaScript library alongside jQuery, return control of $ back to the other library with a call to $.noConflict().
