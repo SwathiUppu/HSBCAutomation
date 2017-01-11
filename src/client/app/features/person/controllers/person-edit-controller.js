@@ -6,9 +6,9 @@
     .module('app.person')
     .controller('PersonEditController', PersonEditController);
 
-  PersonEditController.$inject = ['$state', '$stateParams', 'person'];
+  PersonEditController.$inject = ['$state', '$stateParams', '$timeout', 'person'];
 
-  function PersonEditController($state, $stateParams, person) {
+  function PersonEditController($state, $stateParams, $timeout, person) {
     var vm = this;
 
     vm.save = function (e) {
@@ -29,7 +29,11 @@
 
     if ($stateParams.id !== '-1') {
       person.getPersonById($stateParams.id).then(function (response) {
-        vm.person = response.payload;
+        vm.isBusy = true;
+        $timeout(function() {
+	      vm.isBusy = false;
+          vm.person = response.payload;
+        }, 4000);
       });
     } else {
       vm.person = {
