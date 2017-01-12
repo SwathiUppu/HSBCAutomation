@@ -149,6 +149,13 @@ gulp.task("serve", ["serve_injects"], () => {
         data: require('./src/server/data/countries.json'),
         pageSize: 250
     });
+	jsonRestServe.resource.add({
+        root: 'api',
+        name: 'components',
+		key: 'alias',
+        data: require('./src/server/data/components.json'),
+        pageSize: 250
+    });
 
     jsonRestServe.serve(3000);
 });

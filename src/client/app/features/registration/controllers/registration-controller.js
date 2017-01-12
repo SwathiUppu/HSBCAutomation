@@ -6,9 +6,9 @@
     .module('app.registration')
     .controller('RegistrationController', RegistrationController);
 
-    RegistrationController.$inject = ['$state', 'person'];
+    RegistrationController.$inject = ['$state', 'miscFactory'];
 
-  function RegistrationController($state, person) {
+  function RegistrationController($state, miscFactory) {
     var vm = this;
     vm.datepicker = { opened: false };
 
@@ -16,7 +16,7 @@
       vm.datepicker.opened = true;
     };
 
-	person.getCountries().then(function (response) {
+	miscFactory.getCountries().then(function (response) {
       vm.countries = response.payload;
     });
 

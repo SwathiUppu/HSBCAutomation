@@ -1,0 +1,52 @@
+[
+    {
+        "module": "GulpJs",
+        "alias": "gulp",
+        "url": "http://gulpjs.com/"
+    },
+    {
+        "module": "UI Routing",
+        "alias": "routing",
+        "url": "https://github.com/angular-ui/ui-router"
+    },
+    {
+        "module": "Angular Forms",
+        "alias": "angular forms",
+        "url": "https://docs.angularjs.org/guide/forms"
+    },
+    {
+        "module": "Data Binding",
+        "alias": "data binding",
+        "url": "https://docs.angularjs.org/guide/databinding"
+    },
+    {
+        "module": "Angular filters",
+        "alias": "filters",
+        "url": "https://docs.angularjs.org/guide/filter"
+    },
+    {
+        "module": "Angular directives",
+        "alias": "directives",
+        "url": "https://docs.angularjs.org/guide/directive"
+    },
+    {
+        "module": "ngDialog",
+        "alias": "ngDialog",
+        "url": "http://ngmodules.org/modules/ngDialog"
+    },
+    {
+        "module": "Angular UI Bootstrap",
+        "alias": "bootstrap",
+        "url": "https://angular-ui.github.io/bootstrap/"
+    },
+    {
+        "module": "ngToast",
+        "alias": "ngToast",
+        "url": "http://ngmodules.org/modules/ngToast"
+    }
+]
+
+
+
+
+

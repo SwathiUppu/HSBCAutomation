@@ -16,6 +16,7 @@
 		'app.registration',
 		'app.login',
 		'app.sharedModule',
+		'app.serviceModule',
 		'ui.bootstrap',
 		'ngDialog',
 		'ngToast'

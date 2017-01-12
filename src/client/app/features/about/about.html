@@ -1,21 +1,9 @@
 <div>
     <h1>About</h1>
     <p>
-        This Application uses the following technologies:
+        This Application uses the following components in Angularjs:
     </p>
     <ul>
-        <li ng-repeat="technology in vm.technologies"><a href="javascript:void(0)" ng-click="vm.show(technology)">{{technology}}</a></li>
+        <li ng-repeat="technology in vm.technologies"><a href="javascript:void(0)" ng-click="vm.show(technology)">{{technology.module}}</a></li>
     </ul>
-	 <script type="text/ng-template" id="templateId" >
-
-      <div class="ngdialog-message" > 
-                <h2 class="confirmation-title"><i class="fa fa-exclamation-triangle orange"></i> Are you sure?</h2> 
-                <span>{{text}}</span> 
-                  <div class="ngdialog-buttons" ng-controller="AboutCtrl as vm"> 
-                    <button type="button" class="ngdialog-button" ng-click="vm.confirm()">Ok</button> 
-                    <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cancel</button> 
-                  </div> 
-              </div>
-    </script>
-
 </div>
