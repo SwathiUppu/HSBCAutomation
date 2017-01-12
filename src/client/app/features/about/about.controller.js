@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {    
+(function () {
 
   angular.module('app.about').controller('AboutCtrl', AboutCtrl);
 
@@ -25,9 +25,9 @@
             '</button></div></div>',
             plain: true,
             className: 'ngdialog-theme-default'
-        }).then(function (value) {
+        }).then(function () {
              vm.confirm();
-             }, function (value) {});
+             }, function () {});
         }
 
     vm.confirm = function(){
@@ -36,7 +36,7 @@
       } else {
           $window.open('https://angularjs.org/', '_blank');
         }
-	}
+    }
   }
 
 })();

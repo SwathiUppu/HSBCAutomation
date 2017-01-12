@@ -19,9 +19,9 @@
     if(vm.user.username !== 'user' || vm.user.password !== 'user') {
       vm.loginFailed = true;
     } else {
-	  sharedFactory.setSharedData({
+      sharedFactory.setSharedData({
         loginSuccess: true
-      }, "loginSuccess");
+      }, 'loginSuccess');
       $state.go('personList');
     }
     }

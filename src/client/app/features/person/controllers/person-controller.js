@@ -10,9 +10,9 @@
 
   function PersonController($stateParams, $filter, person, clipboard, ngToast) {
     var vm = this;
-	var pages = 0;
-	var i;
-	vm.filteredPeople = [];
+    var pages = 0;
+    var i;
+    vm.filteredPeople = [];
     vm.sortReverse = false;
     vm.orderByField = 'firstName';
     vm.reverseSort = false;
@@ -47,12 +47,12 @@
         }
       });
     };
-	
-	vm.filterChanged = function() {
-	  if(vm.listFilter.length ===0) {
+
+    vm.filterChanged = function() {
+      if(vm.listFilter.length ===0) {
         vm.filteredPeople = [];
-	  }
-	}	
+      }
+    }
 
   }
 

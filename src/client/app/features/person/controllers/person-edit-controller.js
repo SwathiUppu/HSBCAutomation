@@ -31,7 +31,7 @@
       person.getPersonById($stateParams.id).then(function (response) {
         vm.isBusy = true;
         $timeout(function() {
-	      vm.isBusy = false;
+          vm.isBusy = false;
           vm.person = response.payload;
         }, 4000);
       });
