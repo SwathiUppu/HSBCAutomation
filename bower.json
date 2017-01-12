@@ -8,7 +8,8 @@
     "bootstrap": "latest",
     "angular-resource": "latest",
 	"angular-bootstrap": "latest",
-	"ngToast":"latest"
+	"ngToast":"latest",
+	"ngDialog":"latest"
   },
   "overrides": {
     "bootstrap": {

@@ -17,6 +17,7 @@
 		'app.login',
 		'app.sharedModule',
 		'ui.bootstrap',
+		'ngDialog',
 		'ngToast'
     ]);
 

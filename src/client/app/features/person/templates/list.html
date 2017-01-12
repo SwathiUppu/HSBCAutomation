@@ -12,8 +12,9 @@
     </div>
 	 <toast></toast>
     <hr/>
-	 <ul class="pagination-center" uib-pagination total-items="(vm.persons|filter:vm.listFilter).length" items-per-page="10" ng-model="vm.currentPage"></ul>
-    <div class="table-responsive">
+	 <ul ng-show="(vm.persons|filter:vm.listFilter).length > 0" class="pagination-center" uib-pagination total-items="(vm.persons|filter:vm.listFilter).length" items-per-page="10" ng-model="vm.currentPage"></ul>
+     <h2 class="text-align" ng-show="(vm.persons|filter:vm.listFilter).length === 0">No Results</h2>
+	 <div class="table-responsive" ng-show="(vm.persons|filter:vm.listFilter).length > 0">
       <table class="table" ng-if="vm.persons && vm.persons.length">
         <thead>
           <tr>
