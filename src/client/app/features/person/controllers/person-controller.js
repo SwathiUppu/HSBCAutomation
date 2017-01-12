@@ -6,12 +6,13 @@
     .module('app.person')
     .controller('PersonController', PersonController);
 
-  PersonController.$inject = ['$stateParams', 'person', 'clipboard', 'ngToast'];
+  PersonController.$inject = ['$stateParams', '$filter', 'person', 'clipboard', 'ngToast'];
 
-  function PersonController($stateParams, person, clipboard, ngToast) {
+  function PersonController($stateParams, $filter, person, clipboard, ngToast) {
     var vm = this;
 	var pages = 0;
 	var i;
+	vm.filteredPeople = [];
     vm.sortReverse = false;
     vm.orderByField = 'firstName';
     vm.reverseSort = false;
@@ -48,7 +49,9 @@
     };
 	
 	vm.filterChanged = function() {
-		console.log(vm.filtered);
+	  if(vm.listFilter.length ===0) {
+        vm.filteredPeople = [];
+	  }
 	}	
 
   }
