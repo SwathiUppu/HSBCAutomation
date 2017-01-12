@@ -46,6 +46,10 @@
         }
       });
     };
+	
+	vm.filterChanged = function() {
+		console.log(vm.filtered);
+	}	
 
   }
 

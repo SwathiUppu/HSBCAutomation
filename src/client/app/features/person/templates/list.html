@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-1 text-right"><label>Filter by:</label></div>
       <div class="col-md-3">
-        <input type="text" ng-model="vm.listFilter" class="form-control" />
+        <input type="text" ng-model="vm.listFilter" ng-change="vm.filterChanged()" class="form-control" />
       </div>
 	  
     </div>
@@ -33,16 +33,18 @@
 			</th>
             <th>City</th>
             <th>Salary</th>
+			<th>Data</th>
             <th>Ratings</th>
             <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="person in vm.persons.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage)) | orderBy:vm.orderByField:vm.reverseSort | filter: vm.listFilter">
-            <td>{{person.firstName}}</td>
+			<td>{{person.firstName}}</td>
             <td>{{person.lastName}}</td>
             <td>{{person.city}}</td>
             <td>{{person.salary | currency}}</td>
+			<td><a href="app/sample.pdf" download="sample.pdf">Download</a></td>
             <td><ratings value="{{person.ratings}}"></ratings></td>
             <td class="text-center">
               <a ui-sref="personView({id: person.id})">
