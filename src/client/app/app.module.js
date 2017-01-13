@@ -19,7 +19,8 @@
 		'app.serviceModule',
 		'ui.bootstrap',
 		'ngDialog',
-		'ngToast'
+		'ngToast',
+		'app.carouselModule'
     ]);
 
 })();
