@@ -2,7 +2,7 @@
   <div class="panel-heading">
     Person List
   </div>
-  <div ng-show="vm.isBusy" class="overlay"><img class="loader" src="app/loader.gif"></div>
+  <div ng-show="vm.isBusy" class="overlay"><img class="loader" src="app/images/loader.gif"></div>
   <div class="panel-body">
     <div class="row">
       <div class="col-md-1 text-right"><label>Filter by:</label></div>
@@ -21,15 +21,11 @@
           <tr>
 			<th>  
 			  <a href="javascript:void(0)" ng-click="vm.orderByField='firstName'; vm.reverseSort = !vm.reverseSort">
-                <!--<span ng-show="vm.orderByField==='firstName'; !vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
-			    <span ng-show="vm.orderByField==='firstName'; vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
 			    First Name
               </a> 
 			</th>
             <th>
 			  <a href="javascript:void(0)" ng-init="vm.orderByField='lastName'" ng-click="vm.orderByField='lastName'; vm.reverseSort = !vm.reverseSort">
-                <!--<span ng-show="!vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
-			    <span ng-show="vm.orderByField==='lastName' && vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
 			    Last Name
               </a> 
 			</th>
@@ -46,7 +42,7 @@
             <td>{{person.lastName}}</td>
             <td>{{person.city}}</td>
             <td>{{person.salary | currency}}</td>
-			<td><a href="app/sample.pdf" download="sample.pdf">Download</a></td>
+			<td><a href="app/data/sample.pdf" download="sample.pdf">Download</a></td>
             <td><ratings value="{{person.ratings}}"></ratings></td>
             <td class="text-center">
               <a ui-sref="personView({id: person.id})">
