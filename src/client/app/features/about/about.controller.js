@@ -8,13 +8,13 @@
 
   function AboutCtrl ($window, ngDialog, miscFactory) {
     var vm = this;
-	
+
     miscFactory.getComponents().then(function (response) {
       vm.technologies = response.payload;
     });
-	
+
       vm.show = function(technology){
-	   vm.selectedTechnology = technology;	  
+       vm.selectedTechnology = technology;
        ngDialog.openConfirm({
          template:
             '<div class="ngdialog-message"><h2 class="confirmation-title">Documentation <span class="glyphicon glyphicon-book"></span></h2><span>Please click on Ok to redirect to ' + technology.alias + ' documentation</span>' +
@@ -30,7 +30,7 @@
         }
 
     vm.confirm = function(){
-      $window.open(vm.selectedTechnology.url, '_blank'); 
+      $window.open(vm.selectedTechnology.url, '_blank');
     }
   }
 

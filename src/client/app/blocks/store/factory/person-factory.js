@@ -10,7 +10,7 @@
 
   function personFactory($http) {
     var url = '/api/person';
-	
+
     function getTotalCount() {
         return getPersons().then(function (response){
             return response.total;
@@ -24,7 +24,7 @@
         return $http
             .get(url + '?page=' + page)
             .then(function (response) {
-				response.size = size;
+                response.size = size;
                 return response.data;
             });
     }

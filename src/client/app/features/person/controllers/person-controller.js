@@ -6,9 +6,9 @@
     .module('app.person')
     .controller('PersonController', PersonController);
 
-  PersonController.$inject = ['$stateParams', '$filter', 'person', 'clipboard', 'ngToast'];
+  PersonController.$inject = ['$stateParams', '$filter', '$timeout', 'person', 'clipboard', 'ngToast'];
 
-  function PersonController($stateParams, $filter, person, clipboard, ngToast) {
+  function PersonController($stateParams, $filter, $timeout, person, clipboard, ngToast) {
     var vm = this;
     var pages = 0;
     var i;
@@ -29,11 +29,15 @@
     }
 
     person.getPersons($stateParams.page, $stateParams.size).then(function (response) {
-      vm.persons = response.payload;
-      vm.currentPage = 1;
-      vm.itemsPerPage = 10;
-      vm.totalItems = vm.persons.length;
-      createPageArr(response);
+      vm.isBusy = true;
+	  $timeout(function() {
+          vm.isBusy = false;
+          vm.persons = response.payload;
+          vm.currentPage = 1;
+          vm.itemsPerPage = 10;
+          vm.totalItems = vm.persons.length;
+          createPageArr(response);
+        }, 4000);
     });
 
     vm.delete = function (id) {

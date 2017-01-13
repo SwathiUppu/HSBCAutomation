@@ -33,7 +33,7 @@
         $timeout(function() {
           vm.isBusy = false;
           vm.person = response.payload;
-        }, 4000);
+        }, 8000);
       });
     } else {
       vm.person = {

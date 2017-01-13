@@ -9,7 +9,6 @@
   miscFactory.$inject = ['$http'];
 
   function miscFactory($http) {
-    var url = '/api/person';
 
     function getComponents() {
         return $http
@@ -18,19 +17,19 @@
                 return response.data;
             });
     }
-	
-	function getCountries() {
+
+    function getCountries() {
         return $http
             .get('/api/countries')
             .then(function (response) {
                 return response.data;
             });
     }
-    
+
 
     return {
         getComponents: getComponents,
-		getCountries: getCountries
+        getCountries: getCountries
     };
   }
 
