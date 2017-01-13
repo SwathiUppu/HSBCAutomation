@@ -16,10 +16,10 @@
     };
 
     function carouselController () {
-      this.slides = [{"image":"app/images/img1.jpg","text":"Nice image","id":0},
-	  {"image":"app/images/img2.jpg","text":"Awesome photograph","id":1},
-	  {"image":"app/images/img3.jpg","text":"That is so cool","id":2},
-	  {"image":"app/images/img4.jpg","text":"I love that","id":3}]
+      this.slides = [{'image':'app/images/img1.jpg', 'text':'Angular Image1', 'id':0},
+      {'image':'app/images/img2.jpg', 'text':'Angular Image2', 'id':1},
+      {'image':'app/images/img3.jpg', 'text':'Angular Image3', 'id':2},
+      {'image':'app/images/img4.jpg', 'text':'Angular Image4', 'id':3}]
     }
   }
 

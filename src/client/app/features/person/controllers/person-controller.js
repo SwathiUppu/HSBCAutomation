@@ -30,7 +30,7 @@
 
     person.getPersons($stateParams.page, $stateParams.size).then(function (response) {
       vm.isBusy = true;
-	  $timeout(function() {
+      $timeout(function() {
           vm.isBusy = false;
           vm.persons = response.payload;
           vm.currentPage = 1;

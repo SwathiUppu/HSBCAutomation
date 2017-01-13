@@ -17,7 +17,7 @@ module.exports = function () {
         dist: dist,
         files: {
             clientIndexHtml: client + "index.html",
-            mainLess: clientApp + "app.style.less",
+            mainLess: clientApp + "less/app.style.less",
             js: [clientApp + "**/*.js", "!" + clientApp + "**/*.spec.js"],
             template: [clientApp + "**/*.html"],
             less: clientApp + "**/*.less"
